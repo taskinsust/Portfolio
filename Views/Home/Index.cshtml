@@ -2,7 +2,60 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="cover height-60">
+    <div class="container pos-vertical-center">
+        <div class="row">
+            <div class="col-md-11 col-lg-8">
+                <h1>Marc Hammond</h1>
+                <p class="lead">
+                    Senior .NET developer Dhaka
+                    <img alt="flag" src="img/flag-1.png" />.
+                </p>
+                <p class="lead">
+                 Skilled in bridging business and IT teams to ensure seamless communication and successful project outcomes. Proven track record in developing large-scale web applications, including CRM and management solutions. 
+                 </p>
+                                            <p class="lead">
+                                                Adept in navigating ERP processes and aligning technology with business goals.
+                                            </p>
+                <ul class="social-list list-inline list--hover">
+                    <li>
+                        <a href="#">
+                            <i class="socicon socicon-github icon icon--xs"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="socicon socicon-dribbble icon icon--xs"></i>
+                        </a>
+                    </li>
+                    <li data-tooltip="">
+                        <a href="#">
+                            <i class="socicon socicon-instagram icon icon--xs"></i>
+                        </a>
+                    </li>
+                    <li data-tooltip="hello@me.com">
+                        <a href="#">
+                            <i class="socicon socicon-mail icon icon--xs"></i>
+                        </a>
+                    </li>
+                </ul>
+                
+                <!--end of modal-container-->
+            </div>
+            <!--end of modal instance-->
+        </div>      
+
+    </div>
+    <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+@{
+    await Html.RenderPartialAsync("_resumeDownload");
+    await Html.RenderPartialAsync("_profileSummary");
+    await Html.RenderPartialAsync("_education");
+}
+@{
+    await Html.RenderPartialAsync("_projectShowcase");
+    await Html.RenderPartialAsync("_contact");
+}
